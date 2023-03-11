@@ -5,20 +5,3 @@
   text-align: center;
 }
 
-.pokemon-list h2 {
-  font-size: 2rem;
-  margin-top: 2rem;
-}
-
-.pokemon-list ul {
-  list-style: none;
-  padding: 0;
-}
-
-.pokemon-list li {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.5rem;
-}
