@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import "../styles.css";
 
 function PokemonList() {
+  // Define state to hold the list of Pokemon from the API
   const [pokemon, setPokemon] = useState([]);
 
+  // Fetch the list of Pokemon from the API when the component mounts
   useEffect(() => {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
       .then((response) => response.json())
@@ -14,10 +16,11 @@ function PokemonList() {
 
   return (
     <div className="pokemon-list">
-      <h2>Pokemon List</h2>
       <ul>
         {pokemon.map((poke) => (
-          <li key={poke.name}>{poke.name}</li>
+          // Map over the list of Pokemon and render a list item for each
+          // Use the Pokemon's name as the key for each list item
+          <li key={poke.name} className="pokemon-name">{poke.name}</li>
         ))}
       </ul>
     </div>
@@ -25,4 +28,3 @@ function PokemonList() {
 }
 
 export default PokemonList;
-
